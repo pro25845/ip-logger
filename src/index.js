@@ -19,7 +19,7 @@ export default {
         .catch((err) => console.error("DB insert failed:", err))
     );
 
-    return new Response("404 Not Found", {
+    return new Response("Not Found", {
       status: 404,
       headers: { "content-type": "text/plain; charset=utf-8" },
     });
