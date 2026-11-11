@@ -8,5 +8,5 @@ database_name = "ip-logger-db"
 database_id = "915903e8-a365-4fe0-a0a1-51e617eec9c5"
 
 [observability.logs]
-enabled = false
+enabled = true
 invocation_logs = true
