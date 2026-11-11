@@ -1,0 +1,14 @@
+{
+  "name": "ip-logger",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "db:init": "wrangler d1 execute ip-logger-db --remote --file=./schema.sql",
+    "db:init:local": "wrangler d1 execute ip-logger-db --local --file=./schema.sql",
+    "logs": "wrangler d1 execute ip-logger-db --remote --command \"SELECT * FROM visits ORDER BY id DESC LIMIT 50\""
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

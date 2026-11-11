@@ -1,0 +1,8 @@
+name = "ip-logger"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ip-logger-db"
+database_id = "ここにwrangler d1 createで表示されたIDを貼る"
