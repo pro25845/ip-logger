@@ -1,6 +1,11 @@
 export default {
   async fetch(request, env, ctx) {
-    const ip = request.headers.get("CF-Connecting-IP") ?? "unknown";
+    // IPv4を優先取得し、なければ通常のIP（IPv6含む）を取得
+    const ip =
+      request.headers.get("CF-Connecting-IPv4") ??
+      request.headers.get("CF-Connecting-IP") ??
+      "unknown";
+
     const url = new URL(request.url);
 
     // レスポンスを遅らせないようバックグラウンドで記録
